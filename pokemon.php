@@ -28,6 +28,40 @@ class pokemon {
         return $this->name . ' ' . $this->energyType . ' ' . $this->attacks . ' ' . $this->weakness . ' ' . $this->resistance;
     }
 
+    public function attack($target, $attack)
+    {
+        echo "<p>" . $this->name . "attacked" . $target->name . "with the move" . $attack->name . "<p>"
+        $target->defend($this, $attack);
+        
+
+    }
+    public function defend($attacker, $attack){
+        // loop weaknesses 
+        foreach ($this->weakness as $weaknes){
+            if($attacker->energyType == $weaknes->enerrgyType){
+                $totalDamage = $totalDamage * $weaknes->value;
+            }
+        }
+        // loop resitance 
+        foreach ($this->resistance as $resistance){
+            if($attacker->energyType == $resistance->enerrgyType){
+            print_r($resistance);
+            $totalDamage = $totalDamage - $resistance->value;
+        }
+    }
+        echo "<p> it dealt" . $totalDamage .  "damage </p>";
+        $this->takeDamage($totalDamage);
+    }
+
+
+    public function takeDamage($amount){
+        $this->health = $this->health - $amount;
+        echo "<p> " . $this->name . "has" . $this->getHp() . " health points left from ". $this->hitPoints . "</p>";
+    }
+
+    public function getHp(){
+        return $this->health;
+    }
 }
 
 
@@ -37,10 +71,4 @@ class pokemon {
 
 
 
-  $pikachu = new pokemon("pikachu","lightning","60","60","","","");
-  echo($pikachu);
-  
-  echo '<pre>';
-  var_dump($pikachu);
-  echo '</pre>';
 ?>
