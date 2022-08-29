@@ -6,10 +6,10 @@ class attack {
 
 
 
-    public function __construct($attackName, $attackDamage)
+    public function __construct($attack_name, $attack_damage)
     {
-        $this->name = $attackName;
-        $this->damage = $attackDamage;
+        $this->name = $attack_name;
+        $this->damage = $attack_damage;
         
     }
 }
