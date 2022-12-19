@@ -31,7 +31,7 @@ class pokemon {
 
     public function attack($target, $attack)
     {
-        echo "<p>" . $this->name ." " .  "attacked" . " ".  $target->name ." " . "with " ." " . $attack->name . "</p>";
+       
         $target->defend($this, $attack);
         
 
@@ -61,6 +61,9 @@ class pokemon {
         $this->health = $this->health - $amount;
         echo "<p> " . $this->name . " " . "has" . $this->get_hitpoints() . " health points left from ". $this->hitPoints . "</p>";
     }
+    public function getName(){
+            return $this->name;
+        }
 
     public function get_hitpoints(){
         return $this->health;

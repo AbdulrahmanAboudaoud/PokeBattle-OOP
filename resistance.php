@@ -12,7 +12,14 @@ class resistance {
         $this->value = $value;
         
     }
-    
+
+    public function getResistanceType(){
+        return $this->energy_type;
+    }
+
+    public function getResistanceValue(){
+        return $this->value;
+    }
 }
 
 
