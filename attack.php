@@ -1,8 +1,8 @@
 <?php
 
 class attack {
-    public $name;
-    public $damage;
+    private $name;
+    private $damage;
 
 
 

@@ -1,8 +1,8 @@
 <?php
 
 class weakness {
-    public $energy_type;
-    public $value;
+    private $energy_type;
+    private $value;
 
 
 

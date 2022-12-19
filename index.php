@@ -42,7 +42,7 @@ if($charmeleon->get_hitpoints() <= 0){
 
 <!-- het naam en attack naam van een pokemmon op scherm aantonen -->
 
-<p><?php print_r($pikachu->getName() . " attacked " . $charmeleon->getName() . " with " . $pikachu->getAttack()[0]->name); ?></p>
+<p><?php print_r($pikachu->getName() . " attacked " . $charmeleon->getName() . " with " . $pikachu->getAttack()[0]->getAttackName()); ?></p>
 
 <!-- het totaal schade en huidige hp berekenen en op scherm aantonen --> 
 
@@ -53,7 +53,7 @@ if($charmeleon->get_hitpoints() <= 0){
 
 <p><?php print_r( $charmeleon->getName() . " vs " . $pikachu->getName()); ?></p>
 
-<p><?php print_r($charmeleon->getName() . " attacked " . $pikachu->getName() . " with " . $charmeleon->getAttack()[1]->name); ?></p>
+<p><?php print_r($charmeleon->getName() . " attacked " . $pikachu->getName() . " with " . $charmeleon->getAttack()[1]->getAttackName()); ?></p>
 
 <p><?php $pikachu->attack($pikachu, $charmeleon->getAttack()[1]);?></p>
 
